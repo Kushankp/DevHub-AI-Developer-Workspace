@@ -6,18 +6,22 @@ DevHub is a native iOS workspace for software engineers who move between reposit
 
 This repository is being built in commit-sized production increments instead of one large code drop.
 
-1. Foundation and folder structure
-2. App architecture and dependency injection
-3. Generic networking layer
-4. GitHub authentication and Keychain storage
-5. GitHub GraphQL client
-6. Dashboard
-7. Repository search and favorites
-8. Pull request workflows
-9. AI review module
-10. Offline persistence
-11. Tests, mocks, and UI tests
-12. CI/CD, Fastlane, polish, and release hardening
+1. Foundation
+2. Networking layer
+3. GitHub authentication
+4. GitHub GraphQL
+5. Dashboard
+6. Repository features
+7. Pull request module
+8. AI review assistant
+9. Offline persistence
+10. Testing
+11. CI/CD
+12. Accessibility
+13. Performance
+14. WidgetKit
+15. App Intents
+16. Documentation
 
 ## Architecture
 
@@ -79,7 +83,7 @@ Completed:
 - Step 3: coordinator boundary, feature state model, and dependency registration conventions
 - Step 4: remaining foundation configuration, logging, linting, and formatting policy
 
-## Future Improvements
+## Planned Phases
 
 - WidgetKit summaries for assigned reviews
 - App Intents for opening repositories and PRs
