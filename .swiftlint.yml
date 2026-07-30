@@ -1,0 +1,49 @@
+included:
+  - DevHub
+  - DevHubCore/Sources
+  - DevHubCore/Tests
+
+excluded:
+  - .build
+  - DerivedData
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - modifier_order
+  - private_action
+  - private_outlet
+  - redundant_nil_coalescing
+  - sorted_imports
+  - unavailable_function
+
+disabled_rules:
+  - trailing_comma
+
+line_length:
+  warning: 120
+  error: 140
+
+type_body_length:
+  warning: 250
+  error: 350
+
+file_length:
+  warning: 500
+  error: 700
+
+function_body_length:
+  warning: 50
+  error: 80
+
+identifier_name:
+  min_length:
+    warning: 2
+
+force_cast: error
+force_try: error
+force_unwrapping: error

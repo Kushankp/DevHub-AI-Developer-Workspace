@@ -43,6 +43,8 @@ DevHub/
   Core/
     DependencyInjection/
     Navigation/
+    State/
+  Configuration/
   Networking/
   Models/
   Services/
@@ -56,6 +58,7 @@ DevHubCore/
   Tests/
 fastlane/
 .github/workflows/
+Documentation/
 ```
 
 `DevHub/` contains native iOS application code. `DevHubCore/` contains pure Swift architecture primitives that can be validated with Swift Package Manager while the iOS scheme is developed.
@@ -74,6 +77,7 @@ Completed:
 - Step 1: product direction and repository foundation
 - Step 2: production folder structure
 - Step 3: coordinator boundary, feature state model, and dependency registration conventions
+- Step 4: remaining foundation configuration, logging, linting, and formatting policy
 
 ## Future Improvements
 

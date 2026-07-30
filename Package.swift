@@ -17,7 +17,10 @@ let package = Package(
     targets: [
         .target(
             name: "DevHubCore",
-            path: "DevHubCore/Sources"
+            path: "DevHubCore/Sources",
+            swiftSettings: [
+                .enableUpcomingFeature("ExistentialAny")
+            ]
         ),
         .testTarget(
             name: "DevHubCoreTests",

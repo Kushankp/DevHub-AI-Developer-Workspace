@@ -7,12 +7,12 @@ final class DashboardViewModel: AsyncViewModel {
 
     var state: ViewState<DashboardSnapshot> = .idle
 
-    private let repository: DashboardRepository
-    private let errorMapper: ErrorMapping
+    private let repository: any DashboardRepository
+    private let errorMapper: any ErrorMapping
 
     init(
-        repository: DashboardRepository,
-        errorMapper: ErrorMapping = DefaultErrorMapper()
+        repository: any DashboardRepository,
+        errorMapper: any ErrorMapping = DefaultErrorMapper()
     ) {
         self.repository = repository
         self.errorMapper = errorMapper

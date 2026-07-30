@@ -18,7 +18,7 @@ final class DependencyContainerTests: XCTestCase {
             ProductionGreetingService()
         }
 
-        let service: GreetingService = container.resolve(GreetingService.self)
+        let service: any GreetingService = container.resolve(GreetingService.self)
 
         XCTAssertEqual(service.greeting(), "Hello, DevHub")
     }
@@ -32,7 +32,7 @@ final class DependencyContainerTests: XCTestCase {
             ReplacementGreetingService()
         }
 
-        let service: GreetingService = container.resolve(GreetingService.self)
+        let service: any GreetingService = container.resolve(GreetingService.self)
 
         XCTAssertEqual(service.greeting(), "Replacement")
     }
