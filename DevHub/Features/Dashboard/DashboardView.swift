@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @Environment(AppCoordinator.self) private var coordinator
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
@@ -17,6 +19,16 @@ struct DashboardView: View {
             .padding(.vertical, 24)
         }
         .navigationTitle("DevHub")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    coordinator.push(.settings)
+                } label: {
+                    Image(systemName: "gearshape")
+                }
+                .accessibilityLabel("Open settings")
+            }
+        }
     }
 }
 
@@ -37,4 +49,5 @@ private struct DashboardHeader: View {
     NavigationStack {
         DashboardView()
     }
+    .environment(AppCoordinator())
 }

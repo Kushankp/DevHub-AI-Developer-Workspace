@@ -69,7 +69,11 @@ fastlane/
 
 ## Current Status
 
-Step 1 is the production foundation: repository structure, project direction, baseline architecture contracts, and a testable Swift package for core dependency injection.
+Completed:
+
+- Step 1: product direction and repository foundation
+- Step 2: production folder structure
+- Step 3: coordinator boundary, feature state model, and dependency registration conventions
 
 ## Future Improvements
 

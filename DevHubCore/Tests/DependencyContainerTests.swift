@@ -22,4 +22,24 @@ final class DependencyContainerTests: XCTestCase {
 
         XCTAssertEqual(service.greeting(), "Hello, DevHub")
     }
+
+    func replacesExistingRegistrationForServiceType() {
+        let container = DependencyContainer()
+        container.register(GreetingService.self) { _ in
+            ProductionGreetingService()
+        }
+        container.register(GreetingService.self) { _ in
+            ReplacementGreetingService()
+        }
+
+        let service: GreetingService = container.resolve(GreetingService.self)
+
+        XCTAssertEqual(service.greeting(), "Replacement")
+    }
+}
+
+private struct ReplacementGreetingService: GreetingService {
+    func greeting() -> String {
+        "Replacement"
+    }
 }
