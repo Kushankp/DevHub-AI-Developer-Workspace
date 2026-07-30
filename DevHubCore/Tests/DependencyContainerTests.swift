@@ -1,0 +1,25 @@
+import XCTest
+@testable import DevHubCore
+
+private protocol GreetingService {
+    func greeting() -> String
+}
+
+private struct ProductionGreetingService: GreetingService {
+    func greeting() -> String {
+        "Hello, DevHub"
+    }
+}
+
+final class DependencyContainerTests: XCTestCase {
+    func resolvesRegisteredProtocolServices() {
+        let container = DependencyContainer()
+        container.register(GreetingService.self) { _ in
+            ProductionGreetingService()
+        }
+
+        let service: GreetingService = container.resolve(GreetingService.self)
+
+        XCTAssertEqual(service.greeting(), "Hello, DevHub")
+    }
+}
